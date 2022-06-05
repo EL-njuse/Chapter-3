@@ -15,6 +15,7 @@ public class playerControlled : MonoBehaviour
     public LayerMask ground;
     private bool isPlayerInSign;
     public bool canMove = true;
+    public bool canMove2 = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,7 @@ public class playerControlled : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canMove)
+        if (canMove && canMove2)
         {
             Movement();
             SwitchAnim();

@@ -12,6 +12,7 @@ public class callGirl : MonoBehaviour
     public GameObject boy;
     public GameObject phone;
     public GameObject black;
+
     void Start()
     {
         
@@ -40,9 +41,11 @@ public class callGirl : MonoBehaviour
         black.SetActive(true);
         FindObjectOfType<playerControlled>().canMove = false;
         FindObjectOfType<playerControlled>().GetComponent<Transform>().position =
-            new Vector3(14, -1.44F, 0);
+            new Vector3(12, -1.44F, 0);
         FindObjectOfType<playerControlled>().GetComponent<Transform>().localScale =
-            new Vector3(-1, 1, 1); ;
+            new Vector3(-1, 1, 1);
+        FindObjectOfType<playerControlled>().canMove2 = false;
+
     }
 
     public void talkonce()

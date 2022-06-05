@@ -13,7 +13,7 @@ public class DialogueManager : MonoBehaviour
 
     [TextArea(1, 3)]
     public string[] dialogueLines;
-    [SerializeField] private int currentline;
+    [SerializeField] private int currentline = 0;
     public bool ifFinished = false;
 
     private void Awake()//µ¥ÀýÄ£Ê½
@@ -44,7 +44,7 @@ public class DialogueManager : MonoBehaviour
         ifFinished = false;
         if (dialogueBox.activeInHierarchy)
         {
-            if (Input.GetMouseButtonUp(0) && dialogueText.text == dialogueLines[currentline])
+            if (Input.GetKeyDown(KeyCode.Space) && dialogueText.text == dialogueLines[currentline])
             {
                 if (isScrolling == false)
                 {

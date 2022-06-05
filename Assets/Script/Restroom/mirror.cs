@@ -6,6 +6,7 @@ public class mirror : MonoBehaviour
 {
     public bool ifFound = false;
     public bool isEntered;
+    public GameObject talk;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class mirror : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) && isEntered)
         {
             ifFound = true;
+            talk.SetActive(true);
         }
     }
 

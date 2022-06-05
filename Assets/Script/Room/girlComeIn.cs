@@ -31,5 +31,6 @@ public class girlComeIn : MonoBehaviour
         black.SetActive(false);
         girl.SetActive(true);
         Talk.SetActive(true);
+        FindObjectOfType<playerControlled>().canMove2 = false;
     }
 }

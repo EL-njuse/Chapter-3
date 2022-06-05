@@ -39,6 +39,7 @@ public class Talkable : MonoBehaviour
         {
             nextTrigger.SetActive(true);
         }
+
     }
 
 

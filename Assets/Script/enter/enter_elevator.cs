@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class enter_elevator : MonoBehaviour
 {
+    public Animator anim;
     public static enter_elevator instance;
     private bool ifEnter = false;
     public int toWhere = 0;
@@ -27,6 +28,7 @@ public class enter_elevator : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q) && ifEnter == true )
         {
+            anim.SetBool("ifOpen", true);
             Invoke("delayOpen", 1);
         }
     }
